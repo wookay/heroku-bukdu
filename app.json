@@ -1,0 +1,7 @@
+{
+  "name": "Start on Heroku: Julia",
+  "description": "A barebones Julia app, which can easily be deployed to Heroku.",
+  "image": "heroku/julia",
+  "repository": "https://github.com/wookay/heroku-bukdu",
+  "keywords": ["julia", "bukdu" ]
+}
