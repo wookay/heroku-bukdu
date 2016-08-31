@@ -45,6 +45,10 @@ Router() do
     get("/", WelcomeController, index)
 end
 
+Endpoint() do
+    plug(Plug.Static, at= "/", from= "public") 
+    plug(Router)
+end
 
 Bukdu.start(parse(Int,ENV["PORT"]); host=ip"0.0.0.0")
 
