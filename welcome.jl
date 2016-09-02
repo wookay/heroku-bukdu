@@ -5,16 +5,21 @@ end
 
 function layout(::Layout, body, options)
     """
-<html>
-  <head><title>Bukdu 🌌 </title></head>
-  <body>$body<body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bukdu 🌌 </title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+<body>$body<body>
 </html>
 """
 end
 
+
 function index(::WelcomeController)
-    repo = LibGit2.GitRepo(Pkg.dir("Bukdu"))
-    commit = string(LibGit2.revparseid(repo, "HEAD"))
+    commit = Bukdu.Server.commit_short()
     text = """
 # Bukdu 🌌
 
@@ -34,7 +39,7 @@ You can run Bukdu on [Heroku](https://www.heroku.com/).
 
 # Welcome
 
-This page is running on Bukdu commit [$commit](https://github.com/wookay/Bukdu.jl/commit/$commit) in Juila $(VERSION)
+This page is running in the Bukdu commit [$commit](https://github.com/wookay/Bukdu.jl/commit/$commit) with Juila $(VERSION)
 
 See the full code at [welcome.jl](https://github.com/wookay/heroku-bukdu/blob/master/welcome.jl).
 """
