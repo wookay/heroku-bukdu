@@ -1,1 +1,1 @@
-web: julia-3c9d75391c/bin/julia welcome.jl
+web: julia-0.5.0/bin/julia welcome.jl
