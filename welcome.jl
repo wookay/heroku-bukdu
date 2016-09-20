@@ -3,7 +3,7 @@ importall Bukdu
 type WelcomeController <: ApplicationController
 end
 
-function layout(::Layout, body, options)
+function layout(::Layout, body)
     """
 <!DOCTYPE html>
 <html lang="en">
