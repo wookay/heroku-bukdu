@@ -7,19 +7,23 @@ function layout(::Layout, body)
     """
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Bukdu 🌌 </title>
     <link rel="stylesheet" href="/css/style.css" />
-  </head>
-<body>$body<body>
+</head>
+<body>
+$body
+</body>
 </html>
 """
 end
 
+global counter = 0
 
 function index(::WelcomeController)
-    commit = Bukdu.Server.commit_short()
+    global counter += 1
+    commit = Bukdu.Server.commit_short
     text = """
 # Bukdu 🌌
 
@@ -42,6 +46,8 @@ You can run Bukdu on [Heroku](https://www.heroku.com/).
 This page is running in the Bukdu commit [$commit](https://github.com/wookay/Bukdu.jl/commit/$commit) with Juila $(VERSION)
 
 See the full code at [welcome.jl](https://github.com/wookay/heroku-bukdu/blob/master/welcome.jl).
+
+$counter
 """
     render(Markdown/Layout, text)
 end
@@ -57,6 +63,6 @@ end
 
 Bukdu.start(parse(Int,ENV["PORT"]); host=ip"0.0.0.0")
 
-wait()
+Base.JLOptions().isinteractive==0 && wait()
 
 Bukdu.stop()
