@@ -57,7 +57,7 @@ Router() do
 end
 
 Endpoint() do
-    plug(Plug.Static, at= "/", from= "public") 
+    plug(Plug.Static, at= "/", from= "public")
     plug(Router)
 end
 

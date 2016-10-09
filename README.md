@@ -2,7 +2,7 @@ Bukdu 🌌  on Heroku
 ==================
 
 
-* Go to the site =>  http://bukdu.herokuapp.com
+* Go to the site =>  https://bukdu.herokuapp.com
 
 
 ------------------
