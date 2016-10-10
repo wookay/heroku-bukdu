@@ -63,7 +63,7 @@ end
 
 Bukdu.start(parse(Int,ENV["PORT"]); host=ip"0.0.0.0")
 
-(Router)(get, "/")
+(Endpoint)("/")
 Base.JLOptions().isinteractive==0 && wait()
 
 Bukdu.stop()
