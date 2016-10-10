@@ -38,7 +38,7 @@ You can run Bukdu on [Heroku](https://www.heroku.com/).
 
  * [heroku-bukdu](https://github.com/wookay/heroku-bukdu)
 
- * [heroku-buildpack-julia](https://github.com/wookay/heroku-buildpack-julia)
+ * [heroku-buildpack-julia](https://github.com/pinx/heroku-buildpack-julia)
 
 
 # Welcome
