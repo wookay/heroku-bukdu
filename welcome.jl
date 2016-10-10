@@ -35,16 +35,31 @@ It's influenced by [Phoenix framework](http://phoenixframework.org).
 
 You can run Bukdu on [Heroku](https://www.heroku.com/).
 
- * [heroku-bukdu](https://github.com/wookay/heroku-bukdu)
+ * Heroku: Create new app like this.
 
- * [heroku-buildpack-julia](https://github.com/pinx/heroku-buildpack-julia)
+   - [heroku-bukdu](https://github.com/wookay/heroku-bukdu)
+
+ * Heroku: Add two buildpacks on **Settings** -> **Add buildpack**
+
+   - [https://github.com/rcaught/heroku-buildpack-cmake](https://github.com/rcaught/heroku-buildpack-cmake)
+
+   - [https://github.com/wookay/heroku-buildpack-julia](https://github.com/wookay/heroku-buildpack-julia)
+
+  ```sh
+λ ~/work/heroku-bukdu \$ heroku buildpacks
+=== bukdu Buildpack URLs
+1. https://github.com/rcaught/heroku-buildpack-cmake
+2. https://github.com/wookay/heroku-buildpack-julia
+```
+
+ * Get more information: [https://devcenter.heroku.com/categories/deployment](https://devcenter.heroku.com/categories/deployment)
 
 
 # Welcome
 
 This page is running in the Bukdu commit [$commit](https://github.com/wookay/Bukdu.jl/commit/$commit) with Juila $(VERSION)
 
-See the full code at [welcome.jl](https://github.com/wookay/heroku-bukdu/blob/master/welcome.jl).
+See the full code of [welcome.jl](https://github.com/wookay/heroku-bukdu/blob/master/welcome.jl).
 
 $counter
 """
