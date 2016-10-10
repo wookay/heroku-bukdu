@@ -22,7 +22,6 @@ end
 global counter = 0
 
 function index(::WelcomeController)
-    global counter += 1
     commit = Bukdu.Server.commit_short
     text = """
 # Bukdu 🌌
@@ -49,6 +48,7 @@ See the full code at [welcome.jl](https://github.com/wookay/heroku-bukdu/blob/ma
 
 $counter
 """
+    global counter += 1
     render(Markdown/Layout, text)
 end
 
