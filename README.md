@@ -21,13 +21,14 @@ You can run Bukdu on [Heroku](https://www.heroku.com/).
 
    - [https://github.com/rcaught/heroku-buildpack-cmake](https://github.com/rcaught/heroku-buildpack-cmake)
 
-   - [https://github.com/wookay/heroku-buildpack-julia](https://github.com/wookay/heroku-buildpack-julia)
+   - [https://github.com/pinx/heroku-buildpack-julia](https://github.com/pinx/heroku-buildpack-julia)
 
   ```sh
 λ ~/work/heroku-bukdu $ heroku buildpacks
 === bukdu Buildpack URLs
 1. https://github.com/rcaught/heroku-buildpack-cmake
-2. https://github.com/wookay/heroku-buildpack-julia
+2. https://github.com/pinx/heroku-buildpack-julia
 ```
 
  * Get more information: [https://devcenter.heroku.com/categories/deployment](https://devcenter.heroku.com/categories/deployment)
+
