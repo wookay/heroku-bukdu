@@ -1,3 +1,7 @@
 body {
   background-color: linen;
 }
+
+code.hljs {
+  background: snow;
+}
